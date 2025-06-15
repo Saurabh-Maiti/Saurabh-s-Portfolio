@@ -1,0 +1,137 @@
+body {
+  background-color: black;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding-top: 100px; /* Space for fixed navbar */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000000 !important;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-size: 24px;
+}
+
+.navbar .nav-link:hover {
+  color: #ABABAB !important;
+}
+
+.navbar .navbar-nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 75px;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 60px;
+  color: #ABABAB;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 96px;
+  margin: 0;
+  color: #ABABAB;
+}
+
+.hero-text h2 {
+  color: #ffffff;
+  font-size: 72px;
+  margin: 10px 0;
+}
+
+.hero-text h3 {
+  color: #ABABAB;
+  font-size: 32px;
+  margin: 0;
+}
+
+/* Typing cursor */
+.cursor {
+  display: inline-block;
+  background-color: transparent;
+  color: #ABABAB;
+  animation: blink 0.7s infinite;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+/* Hero Image */
+.hero-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+/* Hero Buttons */
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Resume Button */
+.resume-btn {
+  background-color: #ffffff;
+  color: black;
+  text-decoration: none;
+  padding: 8px 16px; /* Slightly wider padding for balance */
+  border-radius: 30px; /* Increased for more roundness */
+  font-weight: lighter;
+  font-size: 28px;
+  transition: background-color 0.3s;
+}
+
+
+.resume-btn:hover {
+  background-color: #ABABAB;
+}
+
+/* Circular Social Buttons */
+.icon-btn {
+  background-color: #ffffff;
+  color: black;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.icon-btn:hover {
+  background-color: #ABABAB;
+  transform: scale(1.1);
+}
+.icon-btn img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}

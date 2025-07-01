@@ -1,137 +1,398 @@
+/* =======================
+   Global Styles
+======================= */
 body {
-  background-color: black;
-  margin: 0;
   font-family: Arial, sans-serif;
-  padding-top: 100px; /* Space for fixed navbar */
+  margin: 0;
+  padding-top: 70px;
+  background-color: #000;
+  color: white;
 }
 
-/* Navbar */
+/* =======================
+   Navbar
+======================= */
 .navbar {
-  background-color: #000000 !important;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  position: fixed;
+  position: fixed !important;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  background: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.navbar .nav-link {
-  color: #ffffff !important;
-  font-size: 24px;
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  pointer-events: none;
+  z-index: -1;
 }
 
-.navbar .nav-link:hover {
-  color: #ABABAB !important;
+.nav-link {
+  color: white !important;
+  margin: 0 20px;
+  font-weight: 500;
+  font-size: 24px !important;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
-.navbar .navbar-nav {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
+.nav-link:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
   width: 100%;
-  gap: 75px;
 }
 
-/* Hero section */
-.hero {
+/* =======================
+   Home Section
+======================= */
+.container-box {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
-  padding: 30px 60px;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: black;
+}
+
+.intro {
+  max-width: 500px;
+}
+
+.Hii {
   color: #ABABAB;
-  gap: 40px;
+  font-size: 64px;
+  margin-bottom: 0.5rem;
 }
 
-.hero-text h1 {
-  font-size: 96px;
-  margin: 0;
+.Saurabh {
+  color: white;
+  font-size: 56px;
+  margin: 0.3rem 0;
+}
+
+.Android {
   color: #ABABAB;
+  font-size: 28px;
+  margin: 0.3rem 0;
 }
 
-.hero-text h2 {
-  color: #ffffff;
-  font-size: 72px;
-  margin: 10px 0;
-}
-
-.hero-text h3 {
-  color: #ABABAB;
-  font-size: 32px;
-  margin: 0;
-}
-
-/* Typing cursor */
 .cursor {
-  display: inline-block;
-  background-color: transparent;
-  color: #ABABAB;
-  animation: blink 0.7s infinite;
-  font-weight: bold;
-  font-size: 32px;
+  animation: blink 1s infinite;
 }
 
 @keyframes blink {
-  0%, 50%, 100% {
-    opacity: 1;
-  }
-  25%, 75% {
-    opacity: 0;
-  }
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
-/* Hero Image */
-.hero-image img {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-}
-/* Hero Buttons */
-.hero-buttons {
-  margin-top: 30px;
+/* =======================
+   Buttons
+======================= */
+.buttons {
+  margin-top: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.buttons svg {
+  color: white;
+}
+
+.buttons img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
 }
 
 /* Resume Button */
-.resume-btn {
-  background-color: #ffffff;
+.buttons .resume {
+  background-color: white;
   color: black;
-  text-decoration: none;
-  padding: 8px 16px; /* Slightly wider padding for balance */
-  border-radius: 30px; /* Increased for more roundness */
-  font-weight: lighter;
-  font-size: 28px;
-  transition: background-color 0.3s;
+  border-radius: 25px;
+  width: auto;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
-
-.resume-btn:hover {
-  background-color: #ABABAB;
+.buttons .resume:hover {
+  background-color: #ababab;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255,255,255,0.3);
 }
 
-/* Circular Social Buttons */
-.icon-btn {
-  background-color: #ffffff;
-  color: black;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
+/* =======================
+   Profile Image
+======================= */
+.profile-img img {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profile-img img:hover {
+  transform: scale(1.05);
+}
+
+/* =======================
+   Section Styling
+======================= */
+.demo-section {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  border-radius: 15px;
+  padding: 50px;
+  margin: 100px 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+.demo-section h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.demo-section p {
+  color: #ababab;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* =======================
+   Education Section
+======================= */
+.education-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 20px;
-  transition: background-color 0.3s, transform 0.3s;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+  color: white;
 }
 
-.icon-btn:hover {
-  background-color: #ABABAB;
+.edu-left {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.edu-right {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ababab;
+}
+
+.edu-degree {
+  font-size: 16px;
+  color: #cccccc;
+  text-align: start;
+  margin-top: 5px;
+}
+
+/* =======================
+   Coding Profile Buttons
+======================= */
+.custom-white-border {
+  border-color: white !important;
+  color: white !important;
+}
+
+.custom-white-border:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* =======================
+   Projects
+======================= */
+.project-box {
+  min-height: 300px;
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+}
+
+.project-box img {
+  max-height: 500px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.project-box img:hover {
+  transform: scale(1.05);
+}
+
+/* =======================
+   Skills
+======================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.skill-card {
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 130px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.skill-card img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skill-card span {
+  font-size: 16px;
+  display: block;
+}
+
+/* =======================
+   Responsive Design
+======================= */
+@media (max-width: 768px) {
+  .container-box {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    min-height: 90vh;
+  }
+
+  .Hii { font-size: 48px; }
+  .Saurabh { font-size: 40px; }
+  .Android { font-size: 24px; }
+
+  .profile-img img {
+    max-width: 250px;
+    margin-top: 30px;
+  }
+
+  .buttons {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .demo-section {
+    margin: 50px 0;
+    padding: 30px 20px;
+  }
+
+  .demo-section h2 {
+    font-size: 2rem;
+  }
+
+  .demo-section p {
+    font-size: 1rem;
+  }
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .edu-degree {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .Hii { font-size: 36px; }
+  .Saurabh { font-size: 32px; }
+  .Android { font-size: 20px; }
+
+  .nav-link {
+    font-size: 16px !important;
+    margin: 0 5px;
+  }
+
+  .profile-img img {
+    max-width: 200px;
+  }
+}
+/* Scroll To Top Button */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 32px;
+  font-weight:bolder;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #ababab;
   transform: scale(1.1);
 }
-.icon-btn img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-}
+
+

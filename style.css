@@ -394,5 +394,9 @@ body {
   background-color: #ababab;
   transform: scale(1.1);
 }
+footer {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
 
 

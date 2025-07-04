@@ -266,6 +266,18 @@ body {
 .project-box img:hover {
   transform: scale(1.05);
 }
+.more_on_github {
+  color: white;
+  text-decoration:none; 
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth effect */
+}
+
+.more_on_github:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
 
 /* =======================
    Skills

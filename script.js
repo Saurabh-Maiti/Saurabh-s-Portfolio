@@ -39,3 +39,8 @@ window.onload = typeWriter;
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+function openWhatsApp() {
+  window.open("https://wa.me/qr/3YHYSU6M7BBED1", "_blank");
+}
+

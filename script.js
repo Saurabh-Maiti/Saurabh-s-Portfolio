@@ -41,6 +41,11 @@ function scrollToTop() {
 }
 
 function openWhatsApp() {
-  window.open("https://wa.me/qr/3YHYSU6M7BBED1", "_blank");
+  var phoneNumber = "916397862498"; // Include country code, no '+' or spaces
+  var message = "Hii, Saurabh";
+  var encoded_message = encodeURIComponent(message);
+  var url = "https://wa.me/" + phoneNumber + "?text=" + encoded_message;
+  window.location.href = url;
 }
+
 

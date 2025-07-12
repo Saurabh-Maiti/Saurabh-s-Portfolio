@@ -41,11 +41,13 @@ function scrollToTop() {
 }
 
 function openWhatsApp() {
+  // This will Call My Whatsapp
   var phoneNumber = "916397862498"; // Include country code, no '+' or spaces
   var message = "Hii, Saurabh";
   var encoded_message = encodeURIComponent(message);
   var url = "https://wa.me/" + phoneNumber + "?text=" + encoded_message;
-  window.location.href = url;
+  window.open(url, "_blank");
+
 }
 
 

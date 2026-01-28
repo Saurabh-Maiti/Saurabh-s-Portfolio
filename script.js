@@ -1,8 +1,4 @@
-const texts = [
-  "Software Engineering Intern",
-  "Backend Developer at Work",
-  "Android Developer After Hours"
-];
+const texts = ["Software Engineering Intern","Backend Developer by Day","Android Developer by Night"];
 let count = 0;         // Index for `texts`
 let index = 0;         // Index for character
 let currentText = '';

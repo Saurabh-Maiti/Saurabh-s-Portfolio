@@ -1,9 +1,9 @@
-const texts = ["an aspiring Software Engineer", "experienced in Android Development"];
+const texts = ["Software Engineering Intern", "experienced in Backend Development", "& in Android Development"];
 let count = 0;         // Index for `texts`
 let index = 0;         // Index for character
 let currentText = '';
 let isDeleting = false;
-const speed = 50;     // Typing speed
+const speed = 40;     // Typing speed
 
 function typeWriter() {
   const target = document.getElementById("typing-text");

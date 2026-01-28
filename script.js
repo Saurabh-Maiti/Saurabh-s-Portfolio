@@ -1,7 +1,7 @@
 const texts = [
   "Software Engineering Intern",
-  "Backend Developer by Default",
-  "Android Developer When Needed"
+  "Backend Developer at Work",
+  "Android Developer After Hours"
 ];
 let count = 0;         // Index for `texts`
 let index = 0;         // Index for character
